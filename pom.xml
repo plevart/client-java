@@ -69,6 +69,7 @@
         <jetcd.version>0.4.1</jetcd.version>
         <joda-time.version>2.9.9</joda-time.version>
         <joda-convert.version>1.9.2</joda-convert.version>
+        <jmh.version>1.29</jmh.version>
         <proto.folder>${basedir}/proto</proto.folder>
         <gpg.keyname>fake gpg key name</gpg.keyname>
         <gpg.skip>true</gpg.skip>
@@ -212,6 +213,21 @@
             <artifactId>simpleclient_pushgateway</artifactId>
             <version>0.10.0</version>
         </dependency>
+
+        <!-- JMH support in tests -->
+        <dependency>
+            <groupId>org.openjdk.jmh</groupId>
+            <artifactId>jmh-core</artifactId>
+            <version>${jmh.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.openjdk.jmh</groupId>
+            <artifactId>jmh-generator-annprocess</artifactId>
+            <version>${jmh.version}</version>
+            <scope>test</scope>
+        </dependency>
+
     </dependencies>
     <build>
         <resources>
